@@ -1,0 +1,42 @@
+<div id="contact-form">
+  <p class="message">
+		<%= t :contact_form_text %>
+	</p>
+	<div class="form-wrapper">
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-user"></i></span>
+			<input type="text" name="name" placeholder="<%= t :your_name %>" required="required">
+		</div>
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-briefcase"></i></span>
+			<input type="text" name="company" placeholder="<%= t :your_company_name %>">
+		</div>
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-envelope"></i></span>
+			<input type="email" name="email" placeholder="<%= t :email_address %>" required="required">
+			
+		</div>
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-exclamation-sign"></i></span>
+			<input type="email" name="email_confirmation" placeholder="<%= t :email_confirm %>" required="required" autocomplete="off">
+
+		</div>
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-bell"></i></span>
+			<input type="text" name="phone" placeholder="<%= t :phone_number %>">
+		</div>
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-list"></i></span>
+			<select name="subject">
+				<option value="1"><%= t :customer_enquiry %></option>
+				<option value="2"><%= t :technical_support %></option>
+				<option value="3"><%= t :general_enquiry %></option>
+			</select>
+		</div>
+		<div class="input-prepend control-group">
+			<span class="add-on"><i class="icon-comment"></i></span>
+			<textarea class="span6" name="message" rows="3" placeholder="<%= t :message %>" required="required"></textarea>
+		</div>
+		<%= show_simple_captcha %>
+	</div>
+</div>
